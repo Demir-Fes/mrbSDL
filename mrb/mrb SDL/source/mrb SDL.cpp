@@ -5,10 +5,11 @@
 
 #include<SDL.h>
 
-SDL_Window* window = 0;
-SDL_Renderer* renderer = 0;
+int main(int argc, char* args[])
+{
 
-int main(int argc, char* args[]) {
+	SDL_Window* window = 0;
+	SDL_Renderer* renderer = 0;
 
 	if (SDL_Init(SDL_INIT_EVERYTHING) >= 0) {
 
@@ -19,7 +20,8 @@ int main(int argc, char* args[]) {
 		if (window != 0) {
 			renderer = SDL_CreateRenderer(window, -1, 0);
 		}
-	} else {
+	} else
+	{
 		return 1;
 	}
 
